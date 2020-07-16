@@ -11,14 +11,14 @@ class Index extends Component {
         </ul>
       )));
 
-      noHayProductos = () => (<div><p>Aun no hay productos</p></div>)
+      noHayProductos = () => (<div><p>Aun no hay productos que comprar por lo tanto no es tan increible :(</p></div>)
 
     
     render() {
         return (
             <div id="tiendaContainer">
                 <div id="containerLeft">
-                    <p>Mi tienda increible</p>
+                    <p className="titulo">Mi tienda increible</p>
                     {(this.props.productos.length > 0)? this.listarProductos() : this.noHayProductos()}
                 </div>
                 <div id="containerRight">

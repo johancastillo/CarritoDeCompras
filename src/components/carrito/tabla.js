@@ -37,7 +37,7 @@ const Tabla = (props) => {
                             Precio unitario
                         </th>
                         <th>
-                            subtotal
+                            Subtotal
                         </th>
                     </tr>
                 </thead>

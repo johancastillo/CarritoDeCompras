@@ -1,9 +1,40 @@
+
+body{
+  margin: 0;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+.titulo{
+  text-align: center;
+  font-size: 25px;
+}
+
 .margin{
   margin: 30px;
 }
 .table{
   width: 100%;
   text-align: left;
+}
+
+input{
+  color: #039BE5;
+  height: 30px;
+  margin-top: 8px;
+  border-radius: 6px;
+  border-color: white;
+  font-weight: 800;
+  font-size: large;
+  margin-right: 10px;
+}
+
+button{
+  margin-left: 10px;
+  background-color: #FF3D00;
+  color: white;
+  border-style: none;
+  height: 25px;
+  border-radius: 6px;
 }
 
 .table td{
@@ -25,16 +56,18 @@
 
 
 #containerLeft{
+  color: #37474F;
   float: left;
   width: 60%;
-  background-color:#BDBDBD;
+  background-color:#B3E5FC;
   padding: 10px;
 }
 
 #containerRight{
+  color: #37474F;
   float: inline-end;
   width: 35%;
-  background-color: #FFCCBC;
+  background-color:#B3E5FC;
   padding: 10px;
 }
 
@@ -44,7 +77,7 @@
   border-radius: 10px;
   margin-left: 8px;
   padding: 10px;
-  height: 150px;
+  display:flex;
 }
 #productCardPhoto{
   width: 130px;
@@ -60,26 +93,28 @@
 #productCardDescription{
   color: #37474F;
   float: right;
-  align-items: center;
-  justify-content: center;
+
   width: 70%;
   margin: 10px;
-  margin: 5px;
+  
 }
 
-body{
-  margin: 0;
+.cardNombre{
+  font-size: 20px;
+  font-weight: bold;
+
 }
+
+.total{
+  text-align: end;
+  margin-right: 40px;
+  font-size: 18px;
+}
+
 
 .center{
   text-align: center;
 }
-.rojo{
-  color: red;
-}
-
-
-
 
 
 .m_left{
@@ -100,11 +135,14 @@ body{
 }
 
 .Modal__container {
+  align-items: center;
+  justify-content: center;
   position: relative;
   top: 10rem;
   background-color: #ffffff;
-  padding: 1rem;
+  padding: 50px;
   width: 400px;
+  min-height: 80px;
 }
 
 .Modal__close-button {
@@ -112,6 +150,6 @@ body{
   top: 0;
   right: 0;
   border: 0;
-  background-color: #F5F5F5;
+  background-color: #FF3D00;
   padding: 0.5rem 1rem;
 }

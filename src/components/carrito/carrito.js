@@ -8,9 +8,9 @@ class Carrito extends Component {
         console.log('<= carrito');
         return (
             <div>
-                <p>Mi super carrito</p>
+                <p className="titulo">Mi super carrito</p>
                 <Tabla productoseEnCarrito={this.props.productoseEnCarrito} />
-                <p>Total: {this.props.total}</p>
+                <p className="total"><strong>Total: ${this.props.total}</strong></p>
             </div>
         )
     }

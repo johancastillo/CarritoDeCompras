@@ -74,12 +74,12 @@ class Producto extends Component {
                    <img src="./logo512.png"/> 
                 </div>
                 <div id="productCardDescription">
-                    <p>{this.props.data.nombre}</p>
+                    <p className="cardNombre">{this.props.data.nombre}</p>
                     <p>$ {this.props.data.precio}</p>
                     <p>Quedan: {this.props.data.cantidad}</p>
-                    <button onClick={this.handleOpenModal}>Add to Car</button>
+                    <button onClick={this.handleOpenModal}>Agregar al carrito</button>
                     <Modal isOpen={this.state.openModal} onClose={this.handleCloseModal}>
-                        <label>Cuantos quieres?</label>
+                        <label>Cuantas piezas de <strong>{this.props.data.nombre}</strong> deseas?</label>
                         <input 
                         type="number" 
                         name="cantidad"
@@ -88,7 +88,7 @@ class Producto extends Component {
                         onChange={this.onChange}
                         value={this.state.cantidad}/>
                         
-                        <button disabled={this.state.disabled} onClick={this.add}>Add</button>
+                        <button disabled={this.state.disabled} onClick={this.add}>Agregar al acrrito</button>
                     </Modal>
                 </div>
             </div>
