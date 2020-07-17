@@ -25,8 +25,8 @@ input{
   border-color: white;
   font-weight: 800;
   font-size: large;
-  margin-right: 10px;
 }
+
 
 button{
   margin-left: 10px;
@@ -35,6 +35,10 @@ button{
   border-style: none;
   height: 25px;
   border-radius: 6px;
+}
+
+button:disabled {
+  background: #ccc;
 }
 
 .table td{

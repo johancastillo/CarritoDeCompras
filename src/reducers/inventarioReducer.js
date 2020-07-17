@@ -1,6 +1,6 @@
 const INITIAL_STATE={
     productos:[],
-    ultimoId:0  
+	ultimoId:0
 };
 
 export default (state = INITIAL_STATE, action)=>{
@@ -16,9 +16,6 @@ export default (state = INITIAL_STATE, action)=>{
 				...state,
 			productos:action.payload
 			};
-
-		
-
 		default: return state;
 	};
 }

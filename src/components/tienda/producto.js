@@ -5,9 +5,8 @@ import Modal from './modal'
 class Producto extends Component {
     state={
         openModal: false,
-        disabled: false,
         cantidad:1,
-
+        error: false
     }
 
     handleCloseModal = () => {
@@ -25,12 +24,18 @@ class Producto extends Component {
         this.setState({
             ...this.state,
             [e.target.name]: e.target.value
-        });
-        if(parseInt(this.state.cantidad) < 1 && parseInt(this.state.cantidad) >= parseInt(this.props.cantidad)){
+        }); 
+        if (this.state.cantidad>= 1 && this.state.cantidad <= this.props.cantidad) {
             this.setState({
-                disabled:true
+                error:false
+            })
+        } else {
+            this.setState({
+                error:true
             })
         }
+
+
     };
 
     restarAlInventario = (props, cantidad) => {
@@ -47,7 +52,7 @@ class Producto extends Component {
         this.props.dispatch({
             type:'ACTUALIZAR_PRODUCTO',
             payload:productos
-        })        
+        })                
     }
 
     add = () =>{
@@ -66,6 +71,9 @@ class Producto extends Component {
         this.restarAlInventario(this.props, body.cantidad)
 
         this.handleCloseModal()
+        this.setState({
+            cantidad:1
+        })
     }
     render(){
         return(
@@ -77,18 +85,21 @@ class Producto extends Component {
                     <p className="cardNombre">{this.props.data.nombre}</p>
                     <p>$ {this.props.data.precio}</p>
                     <p>Quedan: {this.props.data.cantidad}</p>
-                    <button onClick={this.handleOpenModal}>Agregar al carrito</button>
+                    <button onClick={this.handleOpenModal} disabled={(!isNaN(this.props.data.cantidad))? false :true } >Agregar al carrito</button>
                     <Modal isOpen={this.state.openModal} onClose={this.handleCloseModal}>
-                        <label>Cuantas piezas de <strong>{this.props.data.nombre}</strong> deseas?</label>
-                        <input 
-                        type="number" 
-                        name="cantidad"
-                        min={0} 
-                        max={this.props.data.cantidad}
-                        onChange={this.onChange}
-                        value={this.state.cantidad}/>
+                        <div>
+                            <label>Cuantas piezas de <strong>{this.props.data.nombre}</strong> deseas?</label>
+                            <input 
+                            type="number" 
+                            name="cantidad"
+                            min={1} 
+                            max={this.props.data.cantidad}
+                            onChange={this.onChange}
+                            value={this.state.cantidad}/>
+                            
+                            <button onClick={this.add} >Agregar al carrito</button>    
+                        </div>
                         
-                        <button disabled={this.state.disabled} onClick={this.add}>Agregar al acrrito</button>
                     </Modal>
                 </div>
             </div>
