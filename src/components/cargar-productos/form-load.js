@@ -27,7 +27,7 @@ class Formulario extends Component {
     }
     render() {
         return (
-            <div>
+            <div className="form">
                 <div>
                     <label>Nombre del producto: </label>
                     <input 

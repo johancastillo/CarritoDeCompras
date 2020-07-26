@@ -11,7 +11,7 @@ class Index extends Component {
         </ul>
       )));
 
-      noHayProductos = () => (<div><p>Aun no hay productos que comprar por lo tanto no es tan increible :(</p></div>)
+      noHayProductos = () => (<div className="empty"><p>Aun no hay productos que comprar por lo tanto no es tan increible :(</p></div>)
 
     
     render() {

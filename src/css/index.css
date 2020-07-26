@@ -20,7 +20,7 @@ body{
   font-size: 20px;
   height: 100%;
   align-items: center;
-  justify-content: start;
+  justify-content: flex-start;
   padding-left: 3em;
 }
 .link{
@@ -105,10 +105,18 @@ img {
 }
 
 .table{
-  padding-right: 1em;
-  padding-left: 1em;
-  width: 100%;
+  padding:1em;
+  width: 94%;
   text-align: center;
+  background-color:#2A3B47;
+  margin: 2%;
+  border-radius: 1em;
+}
+.table td{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-style: solid;
+  border-color: transparent #0C66A6 #0C66A6;
 }
 
 button{
@@ -121,27 +129,35 @@ button{
 }
 
 button:disabled {
-  background: #ccc;
+  background: rgb(42, 52, 61);
+}
+
+.empty{
+  font-size: 20px;
+  text-align: center;
+  background-color:#2A3B47;
+  margin: 0 10%;
+  border-radius: 4px;
 }
 
 
 input{
-  color: #039BE5;
+  background-color: transparent;
+  color: #73d0ff;
   height: 30px;
   margin-top: 8px;
   border-radius: 6px;
-  border-color: white;
+  border-color: transparent;
+  border-bottom-color: #039BE5;
   font-weight: 800;
   font-size: large;
 }
-
-.table td{
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-style: solid;
-  border-color: transparent #0C66A6 #0C66A6;
+.form{
+  margin: 0 2em;
+  background-color:#2A3B47;
+  border-radius: 1em;
+  padding: 1em;
 }
-
 .total{
   text-align: end;
   margin-right: 40px;
@@ -150,8 +166,6 @@ input{
 .center{
   text-align: center;
 }
-
-
 .Modal {
   position: fixed;
   top: 0;
@@ -159,28 +173,32 @@ input{
   bottom: 0;
   right: 0;
   background-color: rgba(0, 0, 0, 0.5);
-
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .Modal__container {
+  background-color:#2A3B47;
   align-items: center;
   justify-content: center;
   position: relative;
   top: 10rem;
-  background-color: #ffffff;
   padding: 50px;
   width: 400px;
   min-height: 80px;
+  border-radius: 1em;
 }
 
 .Modal__close-button {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: -1.6em;
+  right: -2.4em;
   border: 0;
-  background-color: #FF3D00;
+  background-color: #0C66A6;
   padding: 0.5rem 1rem;
+}
+.modal__tag{
+  font-size: 20px;
+  color: #7fcff7;
 }

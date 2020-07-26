@@ -79,7 +79,7 @@ class Producto extends Component {
         return(
             <div className="product-card">
                 <div className="product-card-photo">
-                   <img src="./logo512.png"/> 
+                   <img src="./logo512.png" alt="imagen del producto"/> 
                 </div>
                 <div className="product-card-description">
                     <p className="card-nombre">{this.props.data.nombre}</p>
@@ -88,7 +88,7 @@ class Producto extends Component {
                     <button onClick={this.handleOpenModal} disabled={(!isNaN(this.props.data.cantidad))? false :true } >Agregar al carrito</button>
                     <Modal isOpen={this.state.openModal} onClose={this.handleCloseModal}>
                         <div>
-                            <label>Cuantas piezas de <strong>{this.props.data.nombre}</strong> deseas?</label>
+                            <label className="modal__tag">Cuantas piezas de <strong>{this.props.data.nombre}</strong> deseas?</label>
                             <input 
                             type="number" 
                             name="cantidad"

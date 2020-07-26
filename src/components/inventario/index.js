@@ -7,16 +7,22 @@ class Inventario extends Component {
         if (this.props.productos.length > 0) {
             return  <Tabla/>
         } else {
-            return <p>Aun no hay productos, que tal si agrega algunos?</p>
+            return <div className="empty"><p>Aun no hay productos, que tal si agrega algunos?</p></div>
+            
         }
     }
-    render() {
+    render() {  
         return (
-            <div>
-                <div id="containerLeft">
-                    {this.renderTabla()}
+            <div className="store-container">
+                <div className="store-item">
+                    <div>
+                        <h1 className="title">Aqui van Todos los productos</h1>
+                    </div>
+                    <div className="product-list">
+                        {this.renderTabla()}
+                    </div>
                 </div>
-                <div id="containerRight">
+                <div className="store-item">
                     <CargarProducto/>
                 </div>
             </div>
