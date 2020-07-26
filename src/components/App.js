@@ -5,14 +5,18 @@ import CargarProductos from './cargar-productos/index'
 import Inventario from './inventario/index'
 import Tienda from './tienda/index'
 const App = () => (
-  <BrowserRouter>
-    <Menu/>
-    <div className='margin'>
-      <Route exact path='/' component={Tienda}/>
-      <Route exact path='/inventario' component={Inventario}/>
-   
-    </div>
-  </BrowserRouter>
+  <div className="main-container">  
+    <BrowserRouter>
+      <div className="header">
+        <Menu/>
+      </div>
+      <div className='content'>
+        <Route exact path='/' component={Tienda}/>
+        <Route exact path='/inventario' component={Inventario}/>
+    
+      </div>
+    </BrowserRouter>
+  </div>
 );
 
 export default App;

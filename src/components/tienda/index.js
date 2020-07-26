@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 
 class Index extends Component {
     listarProductos = () => (
-        this.props.productos.map((producto, key)=>(
+        this.props.productos.map((producto)=>(
         <ul key={producto.id}>
             <Producto data={producto}/>
         </ul>
@@ -16,12 +16,17 @@ class Index extends Component {
     
     render() {
         return (
-            <div id="tiendaContainer">
-                <div id="containerLeft">
-                    <p className="titulo">Mi tienda increible</p>
-                    {(this.props.productos.length > 0)? this.listarProductos() : this.noHayProductos()}
+            <div className="store-container">
+                <div className="store-item">
+                    <div>
+                        <p className="title">Mi tienda increible</p>
+                    </div>
+                    <div className="product-list">
+                        {(this.props.productos.length > 0)? this.listarProductos() : this.noHayProductos()}
+                    </div>
+
                 </div>
-                <div id="containerRight">
+                <div className="store-item">
                     <Carrito/>
                 </div>
             </div>

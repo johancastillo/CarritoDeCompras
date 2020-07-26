@@ -77,12 +77,12 @@ class Producto extends Component {
     }
     render(){
         return(
-            <div id="productCard">
-                <div id="productCardPhoto">
+            <div className="product-card">
+                <div className="product-card-photo">
                    <img src="./logo512.png"/> 
                 </div>
-                <div id="productCardDescription">
-                    <p className="cardNombre">{this.props.data.nombre}</p>
+                <div className="product-card-description">
+                    <p className="card-nombre">{this.props.data.nombre}</p>
                     <p>$ {this.props.data.precio}</p>
                     <p>Quedan: {this.props.data.cantidad}</p>
                     <button onClick={this.handleOpenModal} disabled={(!isNaN(this.props.data.cantidad))? false :true } >Agregar al carrito</button>

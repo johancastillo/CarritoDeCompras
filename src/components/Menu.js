@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 
 const Menu = (props)=>{
     return (
-        <nav id='menu'>
-            <Link to='/'>
+        <nav className='menu'>
+            <Link className="link" to='/'>
                 Tienda
             </Link>
-            <Link to='/inventario'>
+            <Link  className="link" to='/inventario'>
                 Inventario
             </Link>
         </nav>
