@@ -1,16 +1,29 @@
+# My store amazing 
 
-In order to execute this project you must have node v10.16 installed.
+## Screenshot
+![text alternative](./screenshot.png)
 
-In the project directory, you can run:
+## Instruction of installation
 
-### `npm i`
+1. Install dependencies
 
- After in the project directory, you can run:
+```shell
+$ yarn
+```
 
-### `npm start`
+2. Run server
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```shell
+$ yarn start
+```
+
+3. Open project in browser
+
+    [http://localhost:3000](http://localhost:3000)
+
+
 
 At the beginning, only the empty store will appear, so you have to add products in the inventory and immediately these will be available in the store. Once in the store, the products can be added to the cart until they are sold out.
 
+
+New contributor: [Johan Castillo](https://instagram.com/jcboxing2707)
