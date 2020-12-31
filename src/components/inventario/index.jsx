@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Tabla from './tabla';
 import CargarProducto from '../cargar-productos/index';
 import { connect } from 'react-redux'
+
+
 class Inventario extends Component {
     renderTabla = () => {
         if (this.props.productos.length > 0) {

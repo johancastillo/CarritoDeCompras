@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Fatal = (props) => (
+const Fatal = (props:any) => (
     <h2 className='center rojo'>
         {props.mensaje}
     </h2>

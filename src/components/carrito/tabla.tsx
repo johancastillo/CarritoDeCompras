@@ -1,10 +1,10 @@
 import React from 'react';
 
 
-const Tabla = (props) => {
+const Tabla = (props:any) => {
 
     const ponerFilas = ()=> (
-        props.productoseEnCarrito.map((producto)=>(
+        props.productoseEnCarrito.map((producto:any)=>(
           <tr key={producto.id}>
             <td>
               {producto.nombre}
@@ -22,6 +22,7 @@ const Tabla = (props) => {
           </tr>
         ))
       )
+      
     return (
         <div>
             <table className='table'>

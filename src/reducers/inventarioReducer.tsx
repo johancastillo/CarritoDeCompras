@@ -3,7 +3,7 @@ const INITIAL_STATE={
 	ultimoId:0
 };
 
-export default (state = INITIAL_STATE, action)=>{
+export default (state = INITIAL_STATE, action:any)=>{
     switch (action.type) {
 		case 'AGREGAR_PRODUCTO':
 			return {

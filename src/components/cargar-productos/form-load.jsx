@@ -1,18 +1,23 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+
+
 class Formulario extends Component {
+
     state= {
         id: this.props.ultimoId,
         nombre:'',
         cantidad:1,
         precio:1
     }
+
     onChange = e => {
         this.setState({
             ...this.state,
             [e.target.name]: e.target.value
         });
-      };
+    };
+
     agregar = () => {
         this.props.dispatch({
             type:'AGREGAR_PRODUCTO',
@@ -25,6 +30,7 @@ class Formulario extends Component {
             precio:1
         })
     }
+
     render() {
         return (
             <div className="form">

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 
-const Menu = (props)=>{
+const Menu = (props:any)=>{
     return (
         <nav className='menu'>
             <Link className="link" to='/'>

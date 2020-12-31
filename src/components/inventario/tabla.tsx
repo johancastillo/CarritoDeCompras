@@ -1,10 +1,10 @@
 import React from 'react';
 import {connect} from 'react-redux'
 
-const Tabla = (props) => {
+const Tabla = (props:any) => {
 
     const ponerFilas = ()=> (
-        props.productos.map((producto, key)=>(
+        props.productos.map((producto:any, key:any)=>(
           <tr key={producto.id}>
             <td>
               {producto.nombre}
@@ -46,7 +46,7 @@ const Tabla = (props) => {
         </div>
     )
 }
-const mapStateToProps = (reducers) => {
+const mapStateToProps = (reducers:any) => {
 	return reducers.inventarioReducer;
 }
 
