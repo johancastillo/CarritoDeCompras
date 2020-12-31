@@ -1,6 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Route} from 'react-router-dom';
-import Menu from './Menu'
+
+// Components
+import Navegation from './navegation/Navegation'
 import Inventario from './inventario/index'
 import Tienda from './tienda/index'
 
@@ -10,7 +12,7 @@ const App = () => (
     <BrowserRouter>
 
       <div className="header">
-        <Menu/>
+        <Navegation />
       </div>
 
       <div className='content'>

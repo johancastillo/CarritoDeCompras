@@ -1,0 +1,16 @@
+.navegation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+
+    .logo{
+      width: 190px !important;
+    }
+    
+    .link{
+        color: #61DAFB;
+        margin-right: 2em;
+      }
+      
+}
